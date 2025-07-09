@@ -1,225 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nilufar Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilufar Amarlu | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
+    :root {
+      --primary: #d4af37;
+      --bg: #0f0f0f;
+      --text: #fff;
+      --muted: #ccc;
     }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0f0f0f;
-      color: #fff;
+      background: var(--bg);
+      color: var(--text);
       font-family: 'Inter', sans-serif;
-      display: flex; flex-direction: column; align-items: center;
-      padding: 3rem 2rem;
-      min-height: 100vh;
+      padding: 2rem;
       text-align: center;
     }
-
     header {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 3rem;
-      display: flex; justify-content: space-between; align-items: center;
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    header nav a {
-      color: #bbb;
-      text-decoration: none;
-      margin-left: 2rem;
-      transition: color 0.3s ease;
-    }
-
-    header nav a:hover {
-      color: #fff;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      max-width: 800px;
-      line-height: 1.2;
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    p.lead {
-      font-size: 1.2rem;
-      color: #cccccc;
-      margin-top: 1.5rem;
-      max-width: 600px;
-      animation: fadeIn 2.5s ease forwards;
-    }
-
-    .btn {
-      margin-top: 3rem;
-      padding: 0.8rem 2rem;
-      background-color: #fff;
-      color: #0f0f0f;
-      border: none;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-      animation: fadeIn 3s ease forwards;
-    }
-
-    .btn:hover {
-      background-color: #d1d1d1;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    section.products {
-      margin-top: 4rem;
-      max-width: 900px;
-      width: 100%;
-      text-align: left;
-    }
-
-    section.products h2 {
-      font-weight: 700;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
       font-size: 2rem;
+    }
+    nav a {
+      color: var(--muted);
+      margin-left: 2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--text); }
+    main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary);
       margin-bottom: 1rem;
     }
-
-    section.products .grid {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    section.products .product {
-      flex: 1 1 250px;
-      background: #111;
-      padding: 1rem;
-      border-radius: 8px;
-      color: #eee;
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
-      animation-delay: calc(var(--i) * 0.3s);
-    }
-
-    section.products .product img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    section.products .product h3 {
-      margin-top: 0.75rem;
-    }
-
-    section.products .product p {
-      color: #bbb;
-    }
-
-    footer {
-      margin-top: auto;
-      font-size: 0.8rem;
-      color: #888;
-      padding: 2rem 0 1rem;
-      width: 100%;
+    section {
       max-width: 900px;
+      margin: 4rem auto;
+      text-align: left;
+    }
+    section p, li {
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    ul { margin-top: 1rem; padding-left: 1rem; }
+    .btn {
+      background: var(--primary);
+      color: #0f0f0f;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    footer {
       text-align: center;
+      color: #777;
+      margin-top: 4rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div>Nilufar Studio</div>
+  <header data-aos="fade-down">
+    <h1>Nilufar Studio</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#about">درباره من</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#experience">تجربه‌ها</a>
+      <a href="#contact">تماس</a>
     </nav>
   </header>
-  <section id="about" style="margin-top:5rem; max-width: 700px; width: 100%; text-align: left; color: #fff;">
-  <h2 style="font-weight: 700; font-size: 2rem; margin-bottom: 1rem;">درباره من</h2>
-  <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc;">
-    من نیلوفر هستم، طراح و توسعه‌دهنده وب با علاقه به ایجاد تجربه‌های دیجیتال لوکس و مینیمال.  
-    بیش از ۵ سال سابقه در طراحی سایت، توسعه قالب وردپرس و بهینه‌سازی رابط کاربری دارم.
-  </p>
-
-  <h3 style="margin-top: 2rem; font-weight: 600;">مهارت‌ها</h3>
-  <ul style="color: #aaa; margin-left: 1rem;">
-    <li>طراحی وب مدرن و مینیمال</li>
-    <li>توسعه قالب‌های وردپرس با المنتور</li>
-    <li>سئو و بهینه‌سازی محتوا</li>
-    <li>HTML, CSS, JavaScript</li>
-  </ul>
-
-  <h3 style="margin-top: 2rem; font-weight: 600;">تجربه کاری</h3>
-  <ul style="color: #aaa; margin-left: 1rem;">
-    <li>مدیر پروژه طراحی وب - شرکت XYZ (سال‌های ۱۴۰۰ تا حالا)</li>
-    <li>توسعه‌دهنده قالب وردپرس - پروژه‌های مختلف فریلنسری</li>
-    <li>کارشناس سئو و تولید محتوا - سایت‌های فروشگاهی معتبر</li>
-  </ul>
-</section>
-
-<section id="contact" style="margin-top:5rem; max-width: 600px; width: 100%; text-align: left;">
-  <h2 style="font-weight: 700; font-size: 2rem; margin-bottom: 1rem; color: white;">Contact Us</h2>
-  <form action="https://formspree.io/f/mwkayvwr" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
-    <label style="color: #ddd;" for="name">Name</label>
-    <input type="text" id="name" name="name" required placeholder="Your name" style="padding: 0.6rem; border-radius: 5px; border: none;"/>
-    
-    <label style="color: #ddd;" for="email">Email</label>
-    <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com" style="padding: 0.6rem; border-radius: 5px; border: none;"/>
-    
-    <label style="color: #ddd;" for="message">Message</label>
-    <textarea id="message" name="message" rows="4" required placeholder="Write your message here..." style="padding: 0.6rem; border-radius: 5px; border: none;"></textarea>
-    
-    <button type="submit" style="padding: 0.8rem; background: #fff; color: #0f0f0f; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s;">
-      Send Message
-    </button>
-  </form>
-</section>
 
   <main>
-    <h1>Where Minimalism Meets Luxury</h1>
-    <p class="lead">
-      Nilufar Studio brings you a seamless blend of design, technology, and elegance.
-      Create unforgettable experiences with minimal effort.
-    </p>
-    <button class="btn" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">
-      Discover More
-    </button>
+    <section id="about" data-aos="fade-up">
+      <h2>درباره من</h2>
+      <p>
+        من نیلوفر عمارلو هستم، طراح و توسعه‌دهنده وب با تمرکز بر تجربه‌های دیجیتال لوکس، مینیمال و مبتنی بر فناوری.
+        با تخصص کامل در ابزارهایی مانند Figma، Elementor، WooCommerce و سیستم‌های مدیریت محتوا (CMS)، به کسب‌وکارها کمک می‌کنم تا حضور آنلاین حرفه‌ای، سریع و امنی داشته باشند.
+      </p>
+    </section>
 
-    <section class="products" id="products">
-      <h2>Our Featured Products</h2>
-      <div class="grid">
-        <div class="product" style="--i:0">
-          <img src="https://via.placeholder.com/250x150?text=Luxury+Watch" alt="Luxury Watch" />
-          <h3>Luxury Watch</h3>
-          <p>A sleek watch designed for timeless elegance.</p>
-        </div>
-        <div class="product" style="--i:1">
-          <img src="https://via.placeholder.com/250x150?text=Elegant+Sunglasses" alt="Elegant Sunglasses" />
-          <h3>Elegant Sunglasses</h3>
-          <p>Protect your eyes with style and sophistication.</p>
-        </div>
-        <div class="product" style="--i:2">
-          <img src="https://via.placeholder.com/250x150?text=Minimalist+Bag" alt="Minimalist Bag" />
-          <h3>Minimalist Bag</h3>
-          <p>Carry your essentials with modern simplicity.</p>
-        </div>
-      </div>
+    <section id="skills" data-aos="fade-up">
+      <h2>مهارت‌ها</h2>
+      <ul>
+        <li>تسلط کامل بر Figma، Elementor، WooCommerce و CMS</li>
+        <li>بهینه‌سازی امنیت و سرعت سایت</li>
+        <li>افزایش نرخ تبدیل با بهبود محصولات فروشگاهی</li>
+        <li>برنامه‌ریزی کلمات کلیدی، سئوی داخلی و خارجی</li>
+        <li>تجربه در UI/UX، HTML/CSS/JS، Git، WordPress، Angular</li>
+      </ul>
+    </section>
+
+    <section id="experience" data-aos="fade-up">
+      <h2>تجربه کاری</h2>
+      <ul>
+        <li>مدیر سایت | سفیر اسپرت | 1402 تا کنون</li>
+        <li>مدیر سایت | خسروانی 193 | 1402</li>
+        <li>برنامه‌نویس فرانت و تست نرم‌افزار | سامان سلامت پژوه | 1399 تا 1403</li>
+      </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>تماس با من</h2>
+      <form action="https://formspree.io/f/mwkayvwr" method="POST" style="display:flex; flex-direction:column; gap:1rem; max-width: 500px;">
+        <input type="text" name="name" required placeholder="نام شما" style="padding: 0.6rem; border-radius: 6px; border: none;">
+        <input type="email" name="email" required placeholder="ایمیل" style="padding: 0.6rem; border-radius: 6px; border: none;">
+        <textarea name="message" required placeholder="پیام شما..." rows="4" style="padding: 0.6rem; border-radius: 6px; border: none;"></textarea>
+        <button class="btn" type="submit">ارسال</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    © 2025 Nilufar Studio
+    © 2025 طراحی شده توسط نیلوفر عمارلو | Tehran, Iran
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
