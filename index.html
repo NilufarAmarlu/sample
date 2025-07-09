@@ -2,28 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nilufar Studio</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
       background: #0f0f0f;
-      color: #ffffff;
+      color: #fff;
       font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 3rem 2rem;
       min-height: 100vh;
-      padding: 4rem 2rem;
       text-align: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    header nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #fff;
     }
 
     h1 {
@@ -34,7 +50,7 @@
       animation: fadeIn 1.5s ease forwards;
     }
 
-    p {
+    p.lead {
       font-size: 1.2rem;
       color: #cccccc;
       margin-top: 1.5rem;
@@ -45,7 +61,7 @@
     .btn {
       margin-top: 3rem;
       padding: 0.8rem 2rem;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #0f0f0f;
       border: none;
       font-size: 1rem;
@@ -61,22 +77,109 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    section.products {
+      margin-top: 4rem;
+      max-width: 900px;
+      width: 100%;
+      text-align: left;
+    }
+
+    section.products h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section.products .grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    section.products .product {
+      flex: 1 1 250px;
+      background: #111;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #eee;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: calc(var(--i) * 0.3s);
+    }
+
+    section.products .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    section.products .product h3 {
+      margin-top: 0.75rem;
+    }
+
+    section.products .product p {
+      color: #bbb;
     }
 
     footer {
-      margin-top: 5rem;
+      margin-top: auto;
       font-size: 0.8rem;
       color: #888;
+      padding: 2rem 0 1rem;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Where Minimalism Meets Luxury</h1>
-  <p>Nilufar Studio brings you a seamless blend of design, technology, and elegance.  
-     Create unforgettable experiences with minimal effort.</p>
-  <button class="btn">Discover More</button>
-  <footer>© 2025 Nilufar Studio</footer>
+  <header>
+    <div>Nilufar Studio</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Where Minimalism Meets Luxury</h1>
+    <p class="lead">
+      Nilufar Studio brings you a seamless blend of design, technology, and elegance.
+      Create unforgettable experiences with minimal effort.
+    </p>
+    <button class="btn" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">
+      Discover More
+    </button>
+
+    <section class="products" id="products">
+      <h2>Our Featured Products</h2>
+      <div class="grid">
+        <div class="product" style="--i:0">
+          <img src="https://via.placeholder.com/250x150?text=Luxury+Watch" alt="Luxury Watch" />
+          <h3>Luxury Watch</h3>
+          <p>A sleek watch designed for timeless elegance.</p>
+        </div>
+        <div class="product" style="--i:1">
+          <img src="https://via.placeholder.com/250x150?text=Elegant+Sunglasses" alt="Elegant Sunglasses" />
+          <h3>Elegant Sunglasses</h3>
+          <p>Protect your eyes with style and sophistication.</p>
+        </div>
+        <div class="product" style="--i:2">
+          <img src="https://via.placeholder.com/250x150?text=Minimalist+Bag" alt="Minimalist Bag" />
+          <h3>Minimalist Bag</h3>
+          <p>Carry your essentials with modern simplicity.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Nilufar Studio
+  </footer>
 </body>
 </html>
