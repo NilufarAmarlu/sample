@@ -1,148 +1,82 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فوتر فروشگاه سفیر اسپرت</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilufar Studio</title>
   <style>
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    * {
       margin: 0;
-      font-family: Tahoma, sans-serif;
-      direction: rtl;
-      background-color: #f5f5f5;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      max-width: 800px;
+      line-height: 1.2;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-top: 1.5rem;
+      max-width: 600px;
+      animation: fadeIn 2.5s ease forwards;
+    }
+
+    .btn {
+      margin-top: 3rem;
+      padding: 0.8rem 2rem;
+      background-color: #ffffff;
+      color: #0f0f0f;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    .btn:hover {
+      background-color: #d1d1d1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
-      background-color: #420083;
-      color: #fff;
-      padding: 40px 20px 20px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .footer-column {
-      flex: 1 1 200px;
-    }
-
-    .footer-logo {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-column ul li {
-      margin-bottom: 8px;
-    }
-
-    .footer-column ul li a {
-      color: #ddd;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-column ul li a:hover {
-      color: #fff;
-    }
-
-    .newsletter {
-      margin-top: 15px;
-    }
-
-    .newsletter input[type="email"] {
-      padding: 8px;
-      width: 70%;
-      border: none;
-      border-radius: 4px;
-      margin-left: 5px;
-    }
-
-    .newsletter button {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      background-color: #fff;
-      color: #420083;
-      cursor: pointer;
-    }
-
-    .social-icons {
-      margin-top: 15px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-      margin-left: 10px;
-      color: #fff;
-      font-size: 20px;
-      text-decoration: none;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      color: #ccc;
-      font-size: 14px;
-      margin-top: 30px;
+      margin-top: 5rem;
+      font-size: 0.8rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <div class="footer-logo">سفیر اسپرت</div>
-      <p>فروشگاه آنلاین تخصصی کتونی و کفش‌های اورجینال برندهای معتبر دنیا.</p>
-      <div class="social-icons">
-        <a href="#">&#x1F4F7;</a>
-        <a href="#">&#x1F4F1;</a>
-        <a href="#">&#x1F4F2;</a>
-      </div>
-    </div>
-
-    <div class="footer-column">
-      <h4>دسترسی سریع</h4>
-      <ul>
-        <li><a href="#">درباره ما</a></li>
-        <li><a href="#">تماس با ما</a></li>
-        <li><a href="#">سوالات متداول</a></li>
-        <li><a href="#">راهنمای خرید</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>خدمات مشتریان</h4>
-      <ul>
-        <li><a href="#">ضمانت اصالت کالا</a></li>
-        <li><a href="#">شرایط بازگشت</a></li>
-        <li><a href="#">پیگیری سفارش</a></li>
-        <li><a href="#">حریم خصوصی</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>عضویت در خبرنامه</h4>
-      <div class="newsletter">
-        <input type="email" placeholder="ایمیل خود را وارد کنید">
-        <button>عضویت</button>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 تمامی حقوق برای فروشگاه سفیر اسپرت محفوظ است.
-  </div>
-</footer>
-
+  <h1>Where Minimalism Meets Luxury</h1>
+  <p>Nilufar Studio brings you a seamless blend of design, technology, and elegance.  
+     Create unforgettable experiences with minimal effort.</p>
+  <button class="btn">Discover More</button>
+  <footer>© 2025 Nilufar Studio</footer>
 </body>
 </html>
