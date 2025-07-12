@@ -1,83 +1,65 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilufar Amarlu | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilufar Amarlu – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    :root {
-      --primary: #d4af37;
-      --bg: #0f0f0f;
-      --text: #fff;
-      --muted: #ccc;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--bg);
-      color: var(--text);
       font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
       padding: 2rem;
-      text-align: center;
+      line-height: 1.8;
     }
     header {
-      max-width: 1000px;
-      margin: 0 auto 3rem;
+      max-width: 1200px;
+      margin: auto;
+      padding-bottom: 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      color: var(--primary);
-      font-size: 2rem;
-    }
     nav a {
-      color: var(--muted);
-      margin-left: 2rem;
+      color: #aaa;
       text-decoration: none;
-      transition: color 0.3s;
+      margin-left: 1.5rem;
+      font-weight: 600;
     }
-    nav a:hover { color: var(--text); }
-    main h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--primary);
+    nav a:hover {
+      color: #fff;
+    }
+    h1, h2, h3 {
+      font-weight: 800;
       margin-bottom: 1rem;
     }
     section {
       max-width: 900px;
-      margin: 4rem auto;
-      text-align: left;
+      margin: auto;
+      margin-bottom: 4rem;
     }
-    section p, li {
-      line-height: 1.8;
-      color: var(--muted);
+    ul {
+      padding-left: 1.5rem;
     }
-    ul { margin-top: 1rem; padding-left: 1rem; }
-    .btn {
-      background: var(--primary);
-      color: #0f0f0f;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      margin-top: 2rem;
+    .highlight {
+      color: #00ffc3;
+      font-weight: bold;
     }
     footer {
       text-align: center;
+      padding: 2rem 0;
       color: #777;
-      margin-top: 4rem;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Nilufar Studio</h1>
+  <header>
+    <div style="font-size: 1.5rem; font-weight: 800;">Nilufar Amarlu</div>
     <nav>
       <a href="#about">درباره من</a>
       <a href="#skills">مهارت‌ها</a>
@@ -86,51 +68,53 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>درباره من</h2>
-      <p>
-        من نیلوفر عمارلو هستم، طراح و توسعه‌دهنده وب با تمرکز بر تجربه‌های دیجیتال لوکس، مینیمال و مبتنی بر فناوری.
-        با تخصص کامل در ابزارهایی مانند Figma، Elementor، WooCommerce و سیستم‌های مدیریت محتوا (CMS)، به کسب‌وکارها کمک می‌کنم تا حضور آنلاین حرفه‌ای، سریع و امنی داشته باشند.
-      </p>
-    </section>
+  <section id="about" data-aos="fade-up">
+    <h2>درباره من</h2>
+    <p>
+      من <span class="highlight">نیلوفر عمارلو</span> هستم؛ متخصص طراحی و توسعه وب با تمرکز بر خلق تجربه‌های لوکس، مینیمال و کاربرپسند.
+      با بیش از ۵ سال سابقه در زمینه‌های <span class="highlight">وردپرس، طراحی UI/UX، سئو و تولید محتوا</span>، پروژه‌هایی را برای برندهای حرفه‌ای و فروشگاه‌های آنلاین اجرا کرده‌ام.
+    </p>
+  </section>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>مهارت‌ها</h2>
-      <ul>
-        <li>تسلط کامل بر Figma، Elementor، WooCommerce و CMS</li>
-        <li>بهینه‌سازی امنیت و سرعت سایت</li>
-        <li>افزایش نرخ تبدیل با بهبود محصولات فروشگاهی</li>
-        <li>برنامه‌ریزی کلمات کلیدی، سئوی داخلی و خارجی</li>
-        <li>تجربه در UI/UX، HTML/CSS/JS، Git، WordPress، Angular</li>
-      </ul>
-    </section>
+  <section id="skills" data-aos="fade-up">
+    <h2>مهارت‌های کلیدی</h2>
+    <ul>
+      <li>تسلط کامل بر <strong>Figma</strong> برای طراحی رابط‌های حرفه‌ای</li>
+      <li>توسعه سایت‌های فروشگاهی با <strong>Elementor و WooCommerce</strong></li>
+      <li>مدیریت حرفه‌ای سیستم‌های <strong>CMS</strong> و بهینه‌سازی محتوا</li>
+      <li>افزایش امنیت و سرعت وب‌سایت با استانداردهای به‌روز</li>
+      <li>بهینه‌سازی سئو داخلی، خارجی و کلمات کلیدی با ابزارهایی مثل <strong>Mangools</strong></li>
+      <li>کدنویسی با HTML, CSS, JavaScript, Angular و Git</li>
+    </ul>
+  </section>
 
-    <section id="experience" data-aos="fade-up">
-      <h2>تجربه کاری</h2>
-      <ul>
-        <li>مدیر سایت | سفیر اسپرت | 1402 تا کنون</li>
-        <li>مدیر سایت | خسروانی 193 | 1402</li>
-        <li>برنامه‌نویس فرانت و تست نرم‌افزار | سامان سلامت پژوه | 1399 تا 1403</li>
-      </ul>
-    </section>
+  <section id="experience" data-aos="fade-up">
+    <h2>تجربه کاری</h2>
+    <ul>
+      <li><strong>مدیر سایت</strong> در <span class="highlight">سفیر اسپرت</span> – از آبان ۱۴۰۲ تاکنون</li>
+      <li><strong>مدیر سایت</strong> در <span class="highlight">مجموعه خودرویی خسروانی</span> – خرداد ۱۴۰۲ تا آبان ۱۴۰۳</li>
+      <li><strong>برنامه‌نویس فرانت‌اند و تست نرم‌افزار</strong> در <span class="highlight">سامان سلامت پژوه</span> – شهریور ۱۳۹۹ تا خرداد ۱۴۰۳</li>
+    </ul>
+  </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>تماس با من</h2>
-      <form action="https://formspree.io/f/mwkayvwr" method="POST" style="display:flex; flex-direction:column; gap:1rem; max-width: 500px;">
-        <input type="text" name="name" required placeholder="نام شما" style="padding: 0.6rem; border-radius: 6px; border: none;">
-        <input type="email" name="email" required placeholder="ایمیل" style="padding: 0.6rem; border-radius: 6px; border: none;">
-        <textarea name="message" required placeholder="پیام شما..." rows="4" style="padding: 0.6rem; border-radius: 6px; border: none;"></textarea>
-        <button class="btn" type="submit">ارسال</button>
-      </form>
-    </section>
-  </main>
+  <section id="contact" data-aos="fade-up">
+    <h2>تماس با من</h2>
+    <p>برای همکاری در پروژه‌های حرفه‌ای، لطفاً فرم زیر را پر کنید یا از طریق <a href="mailto:nilufaramarlu@gmail.com" style="color:#00ffc3">ایمیل</a> تماس بگیرید.</p>
+    <form action="https://formspree.io/f/mwkayvwr" method="POST" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; max-width: 500px;">
+      <input type="text" name="name" placeholder="نام شما" required style="padding: 0.6rem; border-radius: 5px; border: none;"/>
+      <input type="email" name="email" placeholder="ایمیل" required style="padding: 0.6rem; border-radius: 5px; border: none;"/>
+      <textarea name="message" rows="4" placeholder="پیام شما..." required style="padding: 0.6rem; border-radius: 5px; border: none;"></textarea>
+      <button type="submit" style="padding: 0.8rem; background: #00ffc3; color: #000; font-weight: 600; border: none; border-radius: 8px; cursor: pointer;">ارسال پیام</button>
+    </form>
+  </section>
 
   <footer>
-    © 2025 طراحی شده توسط نیلوفر عمارلو | Tehran, Iran
+    © 2025 نیلوفر عمارلو – تمامی حقوق محفوظ است.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
